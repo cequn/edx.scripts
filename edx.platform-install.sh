@@ -45,15 +45,15 @@ export LC_CTYPE="en_US.UTF-8"
 #export OPENEDX_RELEASE=open-release/ginkgo.2
 # Note: sometimes there are important bug fixes in master that are not included in the named releases.
 #       to date i've always had the best luck with master.
-export OPENEDX_RELEASE=master
-
+#export OPENEDX_RELEASE=master
+export  OPENEDX_RELEASE=open-release/hawthorn.1
 
 
 # 2. Bootstrap the Ansible installation:
-wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/ansible-bootstrap.sh -O - | sudo -H bash
+wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/ansible-bootstrap.sh -O - | sudo bash
 
 # 3. (Optional) If this is a new installation, randomize the passwords:
 wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/generate-passwords.sh -O - | bash
 
 # 4. Install Open edX:
-wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/native.sh -O - | bash > install.out
+wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/native.sh -O - | bash 
